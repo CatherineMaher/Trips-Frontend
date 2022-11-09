@@ -1,0 +1,32 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+     <!-- <h2 class="active"> Sign In </h2> -->
+        <h2 class="active" >
+        
+        <a routerLink="/login" class="nav-link" ng-reflect-router-link="/login" href="/login">Sign In </a> 
+        
+        </h2>
+        <!-- <h2 class="inactive underlineHover" >Sign Up </h2> -->
+        <h2 class="inactive underlineHover" >
+        <nav>
+            <a routerLink="/signup" class="nav-link" ng-reflect-router-link="/signup" href="/signup">Sign Up </a> 
+        </nav>
+        </h2>
+      
+      <!--<h2><button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> SignUp</button> </h2>  -->
+      
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
