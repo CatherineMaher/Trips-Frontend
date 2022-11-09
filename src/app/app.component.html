@@ -1,2 +1,18 @@
-
-<router-outlet></router-outlet>
+<div class="sign">
+    <a class="nav-link" [routerLink] = "['/admin-login']">Login</a>
+    <a class="nav-link" [routerLink] = "['/admin-signup']">Signup</a>
+</div>
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="navbar-brand">{{title}}</a>
+    <ul class="nav nav-pills">
+       <!---- <li><a class="nav-link" [routerLink] = "['/admin-login']">Login</a></li>
+        <li><a class="nav-link" [routerLink] = "['/admin-signup']">Signup</a></li>
+        -->
+      <li><a class="nav-link" [routerLink] = "['/station']">Stations</a></li>
+      <li><a class="nav-link" [routerLink]= "['/trip']">Trips</a></li>
+    </ul>
+  
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
