@@ -1,3 +1,13 @@
+<nav class="navbar navbar-expand navbar-light bg-light">  
+    <ul class="nav nav-pills">
+      <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
+      <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
+      <li><a class="nav-link" [routerLink]= "['/addstation']">Add Station</a></li>
+      <li><a class="nav-link" [routerLink]= "['/addtrip']">Add Trip</a></li>
+      <li><a class="nav-link" [routerLink]= "['/modifystation']">Update Station</a></li>
+      <li><a class="nav-link" [routerLink]= "['/modifytrip']">Update Trip</a></li>
+    </ul>
+  </nav>
 <div class="card" style="text-align: left;">
     <div class="card-header">
         Trips
@@ -24,15 +34,4 @@
             </tr>
         </tbody>
     </table>
-</div>
-<div style="text-align:right ;">
-    <button class ="Edit">
-        Edit
-    </button>
-    <button class ="Add">
-        Add
-    </button>
-    <button class ="Delete">
-        Delete
-    </button>
 </div>

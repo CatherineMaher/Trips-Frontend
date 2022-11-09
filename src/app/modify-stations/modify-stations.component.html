@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand navbar-light bg-light">  
+  <ul class="nav nav-pills">
+    <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
+    <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
+    <li><a class="nav-link" [routerLink]= "['/addstation']">Add Station</a></li>
+    <li><a class="nav-link" [routerLink]= "['/addtrip']">Add Trip</a></li>
+    <li><a class="nav-link" [routerLink]= "['/modifystation']">Update Station</a></li>
+    <li><a class="nav-link" [routerLink]= "['/modifytrip']">Update Trip</a></li>
+  </ul>
+</nav>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station id">
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station Name"> 
+            <input type="submit" class="fadeIn fourth" value="Update station" >
+          </form>   
+    </div>
+  </div>

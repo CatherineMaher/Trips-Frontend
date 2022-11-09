@@ -8,6 +8,10 @@ import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 import { TripComponent } from './trip/trip.component';
 import { StationComponent } from './station/station.component';
 import { RouterModule } from '@angular/router';
+import { ModifyTripsComponent } from './modify-trips/modify-trips.component';
+import { AddTripsComponent } from './add-trips/add-trips.component';
+import { AddStationsComponent } from './add-stations/add-stations.component';
+import { ModifyStationsComponent } from './modify-stations/modify-stations.component';
 
 @NgModule({
   declarations: [
@@ -15,17 +19,25 @@ import { RouterModule } from '@angular/router';
     AdminLoginComponent,
     AdminSignupComponent,
     TripComponent,
-    StationComponent
+    StationComponent,
+    ModifyTripsComponent,
+    AddTripsComponent,
+    AddStationsComponent,
+    ModifyStationsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path:"admin-login", component:AdminLoginComponent},
-      {path:"admin-signup", component:AdminSignupComponent},
+      {path:"login", component:AdminLoginComponent},
+      {path:"signup", component:AdminSignupComponent},
       {path:"trip", component:TripComponent},
       {path:'station',component: StationComponent},
-      {path:' ', redirectTo:'admin-signup', pathMatch:'full'},
-      {path: '**' , redirectTo:'admin-signup', pathMatch:'full'}
+      {path:'modifytrip',component: ModifyTripsComponent},
+      {path:'addstation',component: AddStationsComponent},
+      {path:'modifystation',component: ModifyStationsComponent},
+      {path:'addtrip',component: AddTripsComponent},
+      {path:' ', redirectTo:'signup', pathMatch:'full'},
+      {path: '**' , redirectTo:'signup', pathMatch:'full'}
     ])
   ],
   providers: [],
