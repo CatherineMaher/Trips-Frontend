@@ -15,12 +15,12 @@
         </h2>
    
       <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="First Name">
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Last Name">
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
-        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
-        <input type="submit" class="fadeIn fourth" value="Sign Up">
+        <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name"  [(ngModel)]="name" >
+        <!-- <input type="text" id="login" class="fadeIn second" name="login" placeholder="Last Name"> -->
+        <input type="text" id="email" class="fadeIn second" name="email" placeholder="Email" [(ngModel)]="email">
+        <!-- <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"> -->
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password"  [(ngModel)]="password">
+        <input type="button" class="fadeIn fourth" value="Sign Up" (click)="signUp(name,email,password)">
       </form>
   
     

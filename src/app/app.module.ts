@@ -12,6 +12,8 @@ import { ModifyTripsComponent } from './modify-trips/modify-trips.component';
 import { AddTripsComponent } from './add-trips/add-trips.component';
 import { AddStationsComponent } from './add-stations/add-stations.component';
 import { ModifyStationsComponent } from './modify-stations/modify-stations.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ModifyStationsComponent } from './modify-stations/modify-stations.compo
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path:"login", component:AdminLoginComponent},
       {path:"signup", component:AdminSignupComponent},

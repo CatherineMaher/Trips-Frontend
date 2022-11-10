@@ -22,10 +22,10 @@
             
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let station of stations">
             <tr>
-                <td>20195555</td>
-                <td>Cairo Station</td>
+                <td>{{station.id}}</td>
+                <td>{{station.name}}</td>
                 
             </tr>
         </tbody>

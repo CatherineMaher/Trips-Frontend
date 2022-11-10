@@ -13,10 +13,11 @@
         Trips
     </div>
 </div>
+
 <div class="table">
     <table class="trip table">
         <thead>
-            <tr>
+            <tr >
                 <th>ID</th>
                 <th>From</th>
                 <th>To</th>
@@ -24,13 +25,13 @@
                 <th>End</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let trip of trips">
             <tr>
-                <td>20195556</td>
-                <td>Cairo</td>
-                <td>Aswan</td>
-                <td>7:00 AM</td>
-                <td>7:00 PM</td>
+                <td>{{trip.id}}</td>
+                <td>{{trip.fromStation.name}}</td>
+                <td>{{trip.toStation.name}}</td>
+                <td>{{trip.startDate}}</td>
+                <td>{{trip.endDate}}</td>
             </tr>
         </tbody>
     </table>
