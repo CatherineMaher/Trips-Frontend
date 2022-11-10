@@ -13,4 +13,11 @@ export class StationService {
   getStation(): Observable <station[]> {    
     return this.http.get<station[]>('api/v1/station');
   }
+
+  createStation(name:String): Observable<String>{
+    
+    return this.http.post<String>(
+      `api/v1/station/${name}`,
+    {})
+  }
 }

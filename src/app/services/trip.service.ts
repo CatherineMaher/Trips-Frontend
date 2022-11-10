@@ -13,4 +13,10 @@ export class TripService {
     
     return this.http.get<trips[]>('api/v1/trip');
   }
+
+  createTrip(start_date:String,end_date:String,to_Station:String,from_Station:String):Observable<String>{
+    return this.http.post<String>(
+      `api/v1/trip/${start_date}/${end_date}/${to_Station}/${from_Station}`,
+    {})
+  }
 }

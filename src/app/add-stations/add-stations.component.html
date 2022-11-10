@@ -11,9 +11,8 @@
   <div class="wrapper fadeInDown">
       <div id="formContent">
         <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station id">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station Name"> 
-            <input type="submit" class="fadeIn fourth" value="Add new station" >
+            <input type="text" id="Name" class="fadeIn second" name="Name" placeholder="Station Name" [(ngModel)]="name"> 
+            <input type="submit" class="fadeIn fourth" value="Add new station" (click)="createStation(name)" >
           </form>  
       
       </div>
