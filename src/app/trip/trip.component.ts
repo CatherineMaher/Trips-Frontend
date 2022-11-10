@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { trips } from '../Interfaces/trips';
+import { TripService } from '../services/trip.service';
 
 @Component({
   selector: 'app-trip',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trip.component.css']
 })
 export class TripComponent implements OnInit {
+  trips: trips[] =[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private tripService: TripService) { 
+    this.tripService.getTrips().subscribe(trips => this.trips = trips)
   }
 
+  ngOnInit(): void {
+    this.tripService.getTrips().subscribe(
+      {
+        next:(_trips) =>{
+          this.tripService.getTrips();
+        }
+      })
+      
+  }
+    
 }
