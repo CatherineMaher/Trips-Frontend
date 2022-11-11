@@ -8,16 +8,24 @@ import { station } from '../Interfaces/station';
 })
 export class StationService {
 
-  constructor(private http : HttpClient) { }
-  
-  getStation(): Observable <station[]> {    
+  constructor(private http: HttpClient) {
+  }
+
+  getStation(): Observable<station[]> {
     return this.http.get<station[]>('api/v1/station');
   }
 
-  createStation(name:String): Observable<String>{
-    
+  createStation(name: String): Observable<String> {
+
     return this.http.post<String>(
       `api/v1/station/${name}`,
-    {})
+      {})
+  }
+
+  modify(id: number | undefined, name: string): Observable<String> {
+    return this.http.put<String>(
+      `/api/v1/station/${id}?name=${name}`,
+      {}
+    )
   }
 }

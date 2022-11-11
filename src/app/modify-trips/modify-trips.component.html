@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-light">  
+<nav class="navbar navbar-expand navbar-light bg-light">
   <ul class="nav nav-pills">
     <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
     <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
@@ -9,15 +9,15 @@
   </ul>
 </nav>
 <div class="wrapper fadeInDown">
-    <div id="formContent">
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Trip id">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="From Station">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="To Station">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Start date">
-            <input type="text" id="login" class="fadeIn third" name="login" placeholder="End date">
-            <input type="submit" class="fadeIn fourth" value="Update trip" >
-          </form>
-    
-    </div>
+  <div id="formContent">
+    <form>
+      <input type="text" id="id" class="fadeIn second" name="id" placeholder="Trip id" [(ngModel)]="id">
+      <input type="text" id="from_Station" class="fadeIn second" name="from_Station" placeholder="From Station" [(ngModel)]="from_Station">
+      <input type="text" id="to_Station" class="fadeIn second" name="to_Station" placeholder="To Station" [(ngModel)]="to_Station">
+      <input type="text" id="start_date" class="fadeIn second" name="start_date" placeholder="Start date" [(ngModel)]="start_date">
+      <input type="text" id="end_date" class="fadeIn third" name="end_date" placeholder="End date" [(ngModel)]="end_date">
+      <input type="submit" class="fadeIn fourth" value="Update trip" (click)="modifyTrip(id,start_date,end_date,to_Station,from_Station)">
+    </form>
+
   </div>
+</div>

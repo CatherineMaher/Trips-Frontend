@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-light">  
+<nav class="navbar navbar-expand navbar-light bg-light">
   <ul class="nav nav-pills">
     <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
     <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
@@ -9,11 +9,11 @@
   </ul>
 </nav>
 <div class="wrapper fadeInDown">
-    <div id="formContent">
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station id">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Station Name"> 
-            <input type="submit" class="fadeIn fourth" value="Update station" >
-          </form>   
-    </div>
+  <div id="formContent">
+    <form>
+      <input type="text" id="id" class="fadeIn second" name="id" placeholder="Station id" [(ngModel)]="id">
+      <input type="text" id="name" class="fadeIn second" name="name" placeholder="Station Name" [(ngModel)]="name">
+      <input type="submit" class="fadeIn fourth" value="Update station" (click)="modifyStation(id,name)" >
+    </form>
   </div>
+</div>
