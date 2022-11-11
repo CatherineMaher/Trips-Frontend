@@ -28,4 +28,10 @@ export class TripService {
       {}
     )
   }
+
+  delete(id:number){
+    return this.http.delete<String>(
+      `/api/v1/trip/${id}`
+    )
+  }
 }

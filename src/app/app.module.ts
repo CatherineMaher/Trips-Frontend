@@ -14,6 +14,8 @@ import { AddStationsComponent } from './add-stations/add-stations.component';
 import { ModifyStationsComponent } from './modify-stations/modify-stations.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DeleteTripComponent } from './delete-trip/delete-trip.component';
+import { DeleteStationComponent } from './delete-station/delete-station.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormsModule } from '@angular/forms';
     ModifyTripsComponent,
     AddTripsComponent,
     AddStationsComponent,
-    ModifyStationsComponent
+    ModifyStationsComponent,
+    DeleteTripComponent,
+    DeleteStationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,8 @@ import { FormsModule } from '@angular/forms';
       {path:'addstation',component: AddStationsComponent},
       {path:'modifystation',component: ModifyStationsComponent},
       {path:'addtrip',component: AddTripsComponent},
+      {path:'deletestation',component: DeleteStationComponent},
+      {path:'deletetrip',component: DeleteTripComponent},
       {path:' ', redirectTo:'signup', pathMatch:'full'},
       {path: '**' , redirectTo:'signup', pathMatch:'full'}
     ])

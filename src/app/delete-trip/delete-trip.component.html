@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light bg-light">  
+<nav class="navbar navbar-expand navbar-light bg-light">
     <ul class="nav nav-pills">
       <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
       <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
@@ -10,26 +10,12 @@
       <li><a class="nav-link" [routerLink]= "['/deletetrip']">Delete Trip</a></li>
     </ul>
   </nav>
-<div class="card" style="text-align: left;">
-    <div class="card-header">
-        Stations
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <form>
+        <input type="text" id="id" class="fadeIn second" name="id" placeholder="Trip id" [(ngModel)]="id">
+        <input type="submit" class="fadeIn fourth" value="Delete Trip" (click)="deleteTrip(id)">
+      </form>
     </div>
-</div>
-<div class="table">
-    <table class="station table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-            
-            </tr>
-        </thead>
-        <tbody *ngFor="let station of stations">
-            <tr>
-                <td>{{station.id}}</td>
-                <td>{{station.name}}</td>
-                
-            </tr>
-        </tbody>
-    </table>
-</div>
+  </div>
+  
