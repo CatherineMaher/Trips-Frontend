@@ -28,4 +28,10 @@ export class StationService {
       {}
     )
   }
+
+  delete(id:number){
+    return this.http.delete<String>(
+      `/api/v1/station/${id}`
+    )
+  }
 }
