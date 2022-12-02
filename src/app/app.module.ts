@@ -46,6 +46,8 @@ import { DeleteTripComponent } from './delete-trip/delete-trip.component';
       {path:'addstation',component: AddStationsComponent},
       {path:'modifystation',component: ModifyStationsComponent},
       {path:'addtrip',component: AddTripsComponent},
+      {path:'deletestation',component: DeleteStationComponent},
+      {path:'deletetrip',component: DeleteTripComponent},
       {path:' ', redirectTo:'signup', pathMatch:'full'},
       {path: '**' , redirectTo:'signup', pathMatch:'full'}
     ])
