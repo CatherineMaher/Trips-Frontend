@@ -7,14 +7,14 @@
       <li><a class="nav-link" [routerLink]= "['/modifystation']">Update Station</a></li>
       <li><a class="nav-link" [routerLink]= "['/modifytrip']">Update Trip</a></li>
       <li><a class="nav-link" [routerLink]= "['/deletetrip']">Delete Trip</a></li>
-      <li><a class="nav-link" [routerLink]= "['/deletestation']">Delete Station</a></li>
+     <li><a class="nav-link" [routerLink]= "['/deletestation']">Delete Station</a></li>
     </ul>
   </nav>
   <div class="wrapper fadeInDown">
       <div id="formContent">
         <form>
-            <input type="text" id="Name" class="fadeIn second" name="Name" placeholder="Station Name" [(ngModel)]="name"> 
-            <input type="submit" class="fadeIn fourth" value="Add new station" (click)="createStation(name)" >
+            <input type="text" id="id" class="fadeIn second" name="id" placeholder="Trip id" [(ngModel)]="id">
+            <input type="submit" class="fadeIn fourth" value="Delete Trip" (click)="deleteTrip(id)">
           </form>  
       
       </div>
