@@ -12,26 +12,26 @@ export class StationService {
   }
 
   getStation(): Observable<station[]> {
-    return this.http.get<station[]>('api/v1/station');
+    return this.http.get<station[]>('http://host.docker.internal:8080/api/v1/station');
   }
 
   createStation(name: String): Observable<String> {
 
     return this.http.post<String>(
-      `api/v1/station/${name}`,
+      `http://host.docker.internal:8080/api/v1/station/${name}`,
       {})
   }
 
   modify(id: number | undefined, name: string): Observable<String> {
     return this.http.put<String>(
-      `/api/v1/station/${id}?name=${name}`,
+      `http://host.docker.internal:8080/api/v1/station/${id}?name=${name}`,
       {}
     )
   }
 
   delete(id:number){
     return this.http.delete<String>(
-      `/api/v1/station/${id}`
+      `http://host.docker.internal:8080/api/v1/station/${id}`
     )
   }
 }

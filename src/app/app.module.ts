@@ -14,8 +14,8 @@ import { AddStationsComponent } from './add-stations/add-stations.component';
 import { ModifyStationsComponent } from './modify-stations/modify-stations.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { DeleteTripComponent } from './delete-trip/delete-trip.component';
 import { DeleteStationComponent } from './delete-station/delete-station.component';
+import { DeleteTripComponent } from './delete-trip/delete-trip.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import { DeleteStationComponent } from './delete-station/delete-station.componen
     AddTripsComponent,
     AddStationsComponent,
     ModifyStationsComponent,
-    DeleteTripComponent,
-    DeleteStationComponent
+    DeleteStationComponent,
+    DeleteTripComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +37,8 @@ import { DeleteStationComponent } from './delete-station/delete-station.componen
     FormsModule,
     RouterModule.forRoot([
       {path:"login", component:AdminLoginComponent},
+      {path:"deletestation", component:DeleteStationComponent},
+      {path:"deletetrip", component:DeleteTripComponent},
       {path:"signup", component:AdminSignupComponent},
       {path:"trip", component:TripComponent},
       {path:'station',component: StationComponent},

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light bg-light">  
+
     <ul class="nav nav-pills">
       <li><a class="nav-link" [routerLink] = "['/station']">View Stations</a></li>
       <li><a class="nav-link" [routerLink]= "['/trip']">View Trips</a></li>
@@ -6,16 +7,17 @@
       <li><a class="nav-link" [routerLink]= "['/addtrip']">Add Trip</a></li>
       <li><a class="nav-link" [routerLink]= "['/modifystation']">Update Station</a></li>
       <li><a class="nav-link" [routerLink]= "['/modifytrip']">Update Trip</a></li>
-      <li><a class="nav-link" [routerLink]= "['/deletestation']">Delete Station</a></li>
+
       <li><a class="nav-link" [routerLink]= "['/deletetrip']">Delete Trip</a></li>
+     <li><a class="nav-link" [routerLink]= "['/deletestation']">Delete Station</a></li>
     </ul>
   </nav>
   <div class="wrapper fadeInDown">
-    <div id="formContent">
-      <form>
-        <input type="text" id="id" class="fadeIn second" name="id" placeholder="Trip id" [(ngModel)]="id">
-        <input type="submit" class="fadeIn fourth" value="Delete Trip" (click)="deleteTrip(id)">
-      </form>
+      <div id="formContent">
+        <form>
+            <input type="text" id="id" class="fadeIn second" name="id" placeholder="Trip id" [(ngModel)]="id">
+            <input type="submit" class="fadeIn fourth" value="Delete Trip" (click)="deleteTrip(id)">
+          </form>  
+      
+      </div>
     </div>
-  </div>
-  

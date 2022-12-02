@@ -12,13 +12,13 @@ export class AdminService {
   constructor(private http:HttpClient) { }
   
   getAdmins(): Observable <admin[]> {
-    return this.http.get<admin[]>('api/v1/admin');
+    return this.http.get<admin[]>('http://host.docker.internal:8080/api/v1/admin');
   }
 
   createadmin(name:string,email:string,password:string): Observable<String>{
     
     return this.http.post<String>(
-      `api/v1/admin/${name}/${email}/${password}`,
+      `http://host.docker.internal:8080/api/v1/admin/${name}/${email}/${password}`,
       {})
   }
 }

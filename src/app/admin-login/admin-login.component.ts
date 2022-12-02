@@ -20,8 +20,11 @@ export class AdminLoginComponent implements OnInit {
   ngOnInit(): void {
     this.ad.getAdmins().subscribe(admins => this.admins = admins);
   }
+
   SignUp(name?:string , password?:string ){
+    
     this.ad.getAdmins().subscribe(admins => this.admins = admins);
+    
     let obj=this.admins.find((obj) => {
       return obj.name === name;
     });
